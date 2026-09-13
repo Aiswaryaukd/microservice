@@ -24,24 +24,25 @@ namespace Product.Api.Controllers
             return Ok(dtos);
         }
 
-        [HttpGet("{id:int}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
             var item = await _service.GetByIdAsync(id);
             if (item == null) return NotFound();
-            return Ok(new MessageDto { Id = item.Id, Content = item.Content });
+            var dto = new MessageDto { Id = item.Id, Content = item.Content };
+            return Ok(dto);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] MessageCreateDto model)
+        public async Task<IActionResult> Create([FromBody] MessageCreateDto message)
         {
-            if (model == null)
+            if (message == null)
                 return BadRequest();
 
-            if (!TryValidateModel(model))
+            if (!TryValidateModel(message))
                 return ValidationProblem(ModelState);
 
-            var domain = new MessageClass { Content = model.Content.Trim() };
+            var domain = new MessageClass { Content = message.Content };
             var created = await _service.CreateAsync(domain);
 
             var dto = new MessageDto { Id = created.Id, Content = created.Content };

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project\\MyApp\\MyApp\\Product.Infrastructure\\Product.Infrastructure.csproj": {}
+    "d:\\Project\\MyApp\\MyApp\\Product.Infrastructure\\Product.Infrastructure.csproj": {}
   },
   "projects": {
-    "D:\\Project\\MyApp\\MyApp\\Product.Domain\\Product.Domain.csproj": {
+    "d:\\Project\\MyApp\\MyApp\\Product.Domain\\Product.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\MyApp\\MyApp\\Product.Domain\\Product.Domain.csproj",
+        "projectUniqueName": "d:\\Project\\MyApp\\MyApp\\Product.Domain\\Product.Domain.csproj",
         "projectName": "Product.Domain",
-        "projectPath": "D:\\Project\\MyApp\\MyApp\\Product.Domain\\Product.Domain.csproj",
+        "projectPath": "d:\\Project\\MyApp\\MyApp\\Product.Domain\\Product.Domain.csproj",
         "packagesPath": "C:\\Users\\Rajesh\\AppData\\Local\\Temp\\cursor-sandbox-cache\\985bbea9e2f1af7bf8c5b487ddfa31be\\nuget",
-        "outputPath": "D:\\Project\\MyApp\\MyApp\\Product.Domain\\obj\\",
+        "outputPath": "d:\\Project\\MyApp\\MyApp\\Product.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rajesh\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -337,14 +337,14 @@
         }
       }
     },
-    "D:\\Project\\MyApp\\MyApp\\Product.Infrastructure\\Product.Infrastructure.csproj": {
+    "d:\\Project\\MyApp\\MyApp\\Product.Infrastructure\\Product.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\MyApp\\MyApp\\Product.Infrastructure\\Product.Infrastructure.csproj",
+        "projectUniqueName": "d:\\Project\\MyApp\\MyApp\\Product.Infrastructure\\Product.Infrastructure.csproj",
         "projectName": "Product.Infrastructure",
-        "projectPath": "D:\\Project\\MyApp\\MyApp\\Product.Infrastructure\\Product.Infrastructure.csproj",
+        "projectPath": "d:\\Project\\MyApp\\MyApp\\Product.Infrastructure\\Product.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Rajesh\\AppData\\Local\\Temp\\cursor-sandbox-cache\\985bbea9e2f1af7bf8c5b487ddfa31be\\nuget",
-        "outputPath": "D:\\Project\\MyApp\\MyApp\\Product.Infrastructure\\obj\\",
+        "outputPath": "d:\\Project\\MyApp\\MyApp\\Product.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rajesh\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -359,8 +359,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\Project\\MyApp\\MyApp\\Product.Domain\\Product.Domain.csproj": {
-                "projectPath": "D:\\Project\\MyApp\\MyApp\\Product.Domain\\Product.Domain.csproj"
+              "d:\\Project\\MyApp\\MyApp\\Product.Domain\\Product.Domain.csproj": {
+                "projectPath": "d:\\Project\\MyApp\\MyApp\\Product.Domain\\Product.Domain.csproj"
               }
             }
           }

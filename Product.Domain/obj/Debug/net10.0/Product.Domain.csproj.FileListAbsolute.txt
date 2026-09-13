@@ -9,3 +9,4 @@ D:\Project\MyApp\MyApp\Product.Domain\obj\Debug\net10.0\Product.Domain.dll
 D:\Project\MyApp\MyApp\Product.Domain\obj\Debug\net10.0\refint\Product.Domain.dll
 D:\Project\MyApp\MyApp\Product.Domain\obj\Debug\net10.0\Product.Domain.pdb
 D:\Project\MyApp\MyApp\Product.Domain\obj\Debug\net10.0\ref\Product.Domain.dll
+d:\Project\MyApp\MyApp\Product.Domain\obj\Debug\net10.0\Product.Domain.sourcelink.json

@@ -15,3 +15,4 @@ D:\Project\MyApp\MyApp\Product.Infrastructure\obj\Debug\net10.0\refint\Product.I
 D:\Project\MyApp\MyApp\Product.Infrastructure\obj\Debug\net10.0\Product.Infrastructure.pdb
 D:\Project\MyApp\MyApp\Product.Infrastructure\obj\Debug\net10.0\Product.Infrastructure.genruntimeconfig.cache
 D:\Project\MyApp\MyApp\Product.Infrastructure\obj\Debug\net10.0\ref\Product.Infrastructure.dll
+d:\Project\MyApp\MyApp\Product.Infrastructure\obj\Debug\net10.0\Product.Infrastructure.sourcelink.json

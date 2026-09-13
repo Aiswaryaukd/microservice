@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8Q1wVxN1Ru4=",
+  "dgSpecHash": "kTOkUThEUxY=",
   "success": true,
-  "projectFilePath": "D:\\Project\\MyApp\\MyApp\\Product.Application\\Product.Application.csproj",
+  "projectFilePath": "d:\\Project\\MyApp\\MyApp\\Product.Application\\Product.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rajesh\\AppData\\Local\\Temp\\cursor-sandbox-cache\\985bbea9e2f1af7bf8c5b487ddfa31be\\nuget\\microsoft.extensions.configuration\\9.0.7\\microsoft.extensions.configuration.9.0.7.nupkg.sha512",
     "C:\\Users\\Rajesh\\AppData\\Local\\Temp\\cursor-sandbox-cache\\985bbea9e2f1af7bf8c5b487ddfa31be\\nuget\\microsoft.extensions.configuration.abstractions\\9.0.7\\microsoft.extensions.configuration.abstractions.9.0.7.nupkg.sha512",

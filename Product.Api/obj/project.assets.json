@@ -2109,11 +2109,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project\\MyApp\\MyApp\\Product.Api\\Product.Api.csproj",
+      "projectUniqueName": "d:\\Project\\MyApp\\MyApp\\Product.Api\\Product.Api.csproj",
       "projectName": "Product.Api",
-      "projectPath": "D:\\Project\\MyApp\\MyApp\\Product.Api\\Product.Api.csproj",
+      "projectPath": "d:\\Project\\MyApp\\MyApp\\Product.Api\\Product.Api.csproj",
       "packagesPath": "C:\\Users\\Rajesh\\AppData\\Local\\Temp\\cursor-sandbox-cache\\985bbea9e2f1af7bf8c5b487ddfa31be\\nuget",
-      "outputPath": "D:\\Project\\MyApp\\MyApp\\Product.Api\\obj\\",
+      "outputPath": "d:\\Project\\MyApp\\MyApp\\Product.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Rajesh\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -2128,11 +2128,11 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "D:\\Project\\MyApp\\MyApp\\Product.Application\\Product.Application.csproj": {
-              "projectPath": "D:\\Project\\MyApp\\MyApp\\Product.Application\\Product.Application.csproj"
+            "d:\\Project\\MyApp\\MyApp\\Product.Application\\Product.Application.csproj": {
+              "projectPath": "d:\\Project\\MyApp\\MyApp\\Product.Application\\Product.Application.csproj"
             },
-            "D:\\Project\\MyApp\\MyApp\\Product.Infrastructure\\Product.Infrastructure.csproj": {
-              "projectPath": "D:\\Project\\MyApp\\MyApp\\Product.Infrastructure\\Product.Infrastructure.csproj"
+            "d:\\Project\\MyApp\\MyApp\\Product.Infrastructure\\Product.Infrastructure.csproj": {
+              "projectPath": "d:\\Project\\MyApp\\MyApp\\Product.Infrastructure\\Product.Infrastructure.csproj"
             }
           }
         }

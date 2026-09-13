@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZxilM0Ibrqo=",
+  "dgSpecHash": "R9dLonSiCQY=",
   "success": true,
-  "projectFilePath": "D:\\Project\\MyApp\\MyApp\\Product.Infrastructure\\Product.Infrastructure.csproj",
+  "projectFilePath": "d:\\Project\\MyApp\\MyApp\\Product.Infrastructure\\Product.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rajesh\\AppData\\Local\\Temp\\cursor-sandbox-cache\\985bbea9e2f1af7bf8c5b487ddfa31be\\nuget\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Rajesh\\AppData\\Local\\Temp\\cursor-sandbox-cache\\985bbea9e2f1af7bf8c5b487ddfa31be\\nuget\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
@@ -75,9 +75,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'SQLitePCLRaw.lib.e_sqlite3' 2.1.10 has a known high severity vulnerability, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
-      "projectPath": "D:\\Project\\MyApp\\MyApp\\Product.Infrastructure\\Product.Infrastructure.csproj",
+      "projectPath": "d:\\Project\\MyApp\\MyApp\\Product.Infrastructure\\Product.Infrastructure.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\Project\\MyApp\\MyApp\\Product.Infrastructure\\Product.Infrastructure.csproj",
+      "filePath": "d:\\Project\\MyApp\\MyApp\\Product.Infrastructure\\Product.Infrastructure.csproj",
       "libraryId": "SQLitePCLRaw.lib.e_sqlite3",
       "targetGraphs": [
         "net10.0"
