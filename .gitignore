@@ -1,0 +1,58 @@
+## Build
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]rtifacts/
+*.dll
+*.exe
+*.pdb
+*.cache
+
+## Visual Studio / VS Code / Cursor
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+*.rsuser
+
+## NuGet
+*.nupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+
+## SQLite / local database
+*.db
+*.db-shm
+*.db-wal
+app.db
+
+## Logs and OS
+*.log
+*.tmp
+*.temp
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+## Test / coverage
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+coverage*.json
+coverage*.xml
+
+## Secrets (never commit)
+appsettings.*.local.json
+*.pfx
+*.key
+.env
+.env.*
+
+## Accidental editor leftovers
+**/Untitled
+**/Untitled.*
+BlazorApp/Program.css
