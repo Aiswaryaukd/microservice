@@ -2,15 +2,18 @@ using BlazorApp.Components;
 using BlazorApp.UnitOfWork;
 
 var builder = WebApplication.CreateBuilder(args);
-// Configure ProductService HttpClient to point to the Product.Api running locally
-builder.Services.AddHttpClient<ProductService>(client =>
+
+builder.Services.AddHttpClient("Gateway", client =>
 {
     client.BaseAddress = new Uri("http://localhost:5083/");
 });
-builder.Services.AddHttpClient<MessageClientService>(client =>
-{
-    client.BaseAddress = new Uri("http://localhost:5083/");
-});
+
+builder.Services.AddScoped(sp =>
+    new ProductService(sp.GetRequiredService<IHttpClientFactory>().CreateClient("Gateway")));
+builder.Services.AddScoped(sp =>
+    new MessageClientService(sp.GetRequiredService<IHttpClientFactory>().CreateClient("Gateway")));
+builder.Services.AddScoped(sp =>
+    new FoodClientService(sp.GetRequiredService<IHttpClientFactory>().CreateClient("Gateway")));
 
 // Add services to the container.
 builder.Services.AddRazorComponents()

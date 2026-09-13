@@ -15,6 +15,8 @@ builder.Services.AddDbContext<ProductDbContext>(options =>
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IFoodRepository, FoodRepository>();
+builder.Services.AddScoped<IFoodService, FoodService>();
 builder.Services.AddScoped<IMessageRepository, MessageRepository>();
 builder.Services.AddScoped<IMessageService, MessageService>();
 
@@ -42,6 +44,12 @@ using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<ProductDbContext>();
     db.Database.EnsureCreated();
+    db.Database.ExecuteSqlRaw("""
+        CREATE TABLE IF NOT EXISTS "Foods" (
+            "Id" INTEGER NOT NULL CONSTRAINT "PK_Foods" PRIMARY KEY AUTOINCREMENT,
+            "Name" TEXT NOT NULL
+        );
+        """);
 
     if (!db.Products.Any())
     {
@@ -57,6 +65,15 @@ using (var scope = app.Services.CreateScope())
         db.Messages.AddRange(
             new Product.Domain.Entities.MessageClass { Content = "Welcome to the message board." },
             new Product.Domain.Entities.MessageClass { Content = "Create a new message from the UI." }
+        );
+    }
+
+    if (!db.Foods.Any())
+    {
+        db.Foods.AddRange(
+            new Product.Domain.Entities.FoodClass { Name = "Idli" },
+            new Product.Domain.Entities.FoodClass { Name = "Dosa" },
+            new Product.Domain.Entities.FoodClass { Name = "Pongal" }
         );
     }
 
