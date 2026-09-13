@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2Bjg4OGejps=",
+  "dgSpecHash": "+Fr1s1mREIY=",
   "success": true,
-  "projectFilePath": "D:\\Project\\MyApp\\MyApp\\BlazorApp\\BlazorApp.csproj",
+  "projectFilePath": "d:\\Project\\MyApp\\MyApp\\BlazorApp\\BlazorApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rajesh\\AppData\\Local\\Temp\\cursor-sandbox-cache\\985bbea9e2f1af7bf8c5b487ddfa31be\\nuget\\microsoft.aspnetcore.app.internal.assets\\10.0.2\\microsoft.aspnetcore.app.internal.assets.10.0.2.nupkg.sha512"
   ],
