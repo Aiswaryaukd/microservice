@@ -1,0 +1,69 @@
+﻿@page "/"
+@rendermode InteractiveServer
+@using BlazorApp.UnitOfWork
+@inject ProductService ProductService
+@inject NavigationManager Navigation
+
+<PageTitle>Home</PageTitle>
+
+<div class="product-page">
+    <div class="page-header">
+        <div>
+            <h1 class="page-title">Product Manager</h1>
+            <p class="page-subtitle">Welcome to your product management dashboard</p>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card dashboard-card shadow-sm h-100">
+                <div class="card-body">
+                    <p class="dashboard-label">Total Products</p>
+                    <h2 class="dashboard-value">@(isLoading ? "..." : productCount.ToString())</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card dashboard-card shadow-sm h-100">
+                <div class="card-body">
+                    <p class="dashboard-label">API Status</p>
+                    <h2 class="dashboard-value @(apiOnline ? "text-success" : "text-danger")">
+                        @(isLoading ? "..." : (apiOnline ? "Online" : "Offline"))
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card dashboard-card shadow-sm h-100">
+                <div class="card-body d-flex flex-column">
+                    <p class="dashboard-label">Quick Actions</p>
+                    <div class="mt-auto d-grid gap-2">
+                        <a class="btn btn-primary" href="/products">View Products</a>
+                        <a class="btn btn-outline-primary" href="/products/create">Create Product</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @if (!isLoading && !apiOnline)
+    {
+        <div class="alert alert-warning mt-4" role="alert">
+            API is not reachable. Run <code>scripts/start-all.ps1</code> to start Product.Api, APIGateway, and BlazorApp.
+        </div>
+    }
+</div>
+
+@code {
+    private int productCount;
+    private bool apiOnline;
+    private bool isLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var (products, error) = await ProductService.GetAllAsync();
+        apiOnline = error is null;
+        productCount = products?.Count ?? 0;
+        isLoading = false;
+    }
+}

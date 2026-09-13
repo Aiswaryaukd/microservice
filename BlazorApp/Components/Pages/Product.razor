@@ -1,0 +1,80 @@
+﻿@page "/products"
+@rendermode InteractiveServer
+@using BlazorApp.UnitOfWork
+@inject ProductService ProductService
+
+<PageTitle>Products</PageTitle>
+
+<div class="product-page">
+    <div class="page-header">
+        <div>
+            <h1 class="page-title">Products</h1>
+            <p class="page-subtitle">Manage your product catalog</p>
+        </div>
+        <div class="page-actions">
+            <button class="btn btn-outline-secondary" @onclick="LoadProductsAsync" disabled="@isLoading">
+                Refresh
+            </button>
+            <a class="btn btn-primary" href="/products/create">+ Add Product</a>
+        </div>
+    </div>
+
+    @if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <div class="alert alert-danger d-flex align-items-center justify-content-between" role="alert">
+            <span>@errorMessage</span>
+            <button class="btn btn-sm btn-outline-danger" @onclick="LoadProductsAsync">Retry</button>
+        </div>
+    }
+
+    <div class="card product-card shadow-sm">
+        <div class="card-body p-0">
+            @if (isLoading)
+            {
+                <div class="loading-state">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-3 mb-0 text-muted">Loading products...</p>
+                </div>
+            }
+            else if (products is null || products.Count == 0)
+            {
+                <div class="empty-state">
+                    <div class="empty-icon">📦</div>
+                    <h5>No products yet</h5>
+                    <p class="text-muted">Create your first product to get started.</p>
+                    <a class="btn btn-primary" href="/products/create">Create Product</a>
+                </div>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover product-table mb-0">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Product Name</th>
+                                <th scope="col" class="text-end">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var product in products)
+                            {
+                                <tr>
+                                    <td class="text-muted">@product.Id</td>
+                                    <td class="fw-semibold">@product.Name</td>
+                                    <td class="text-end price-cell">₹@product.Price.ToString("N2")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer bg-white border-top d-flex justify-content-between align-items-center">
+                    <span class="text-muted small">@products.Count product@(products.Count == 1 ? "" : "s") found</span>
+                    <a class="btn btn-sm btn-primary" href="/products/create">Add another</a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

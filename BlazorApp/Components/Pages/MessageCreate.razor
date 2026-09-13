@@ -1,0 +1,79 @@
+@page "/messages/create"
+@rendermode InteractiveServer
+@using BlazorApp.UnitOfWork
+@inject MessageClientService MessageService
+@inject NavigationManager Navigation
+
+<PageTitle>Create Message</PageTitle>
+
+<div class="product-page">
+    <div class="page-header">
+        <div>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-2">
+                    <li class="breadcrumb-item"><a href="/messages">Messages</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Create</li>
+                </ol>
+            </nav>
+            <h1 class="page-title">Create Message</h1>
+            <p class="page-subtitle">Save a new message into the database</p>
+        </div>
+    </div>
+
+    @if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <div class="alert alert-danger" role="alert">@errorMessage</div>
+    }
+
+    <div class="card product-card shadow-sm">
+        <div class="card-body p-4">
+            <EditForm Model="model" OnValidSubmit="HandleValidSubmit">
+                <DataAnnotationsValidator />
+
+                <div class="mb-4">
+                    <label class="form-label fw-semibold" for="messageContent">Message Content</label>
+                    <InputTextArea id="messageContent" class="form-control form-control-lg" @bind-Value="model.Content" placeholder="Type your message" rows="5" />
+                    <ValidationMessage For="@(() => model.Content)" />
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-lg" disabled="@isSubmitting">
+                        @if (isSubmitting)
+                        {
+                            <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                            <span>Saving...</span>
+                        }
+                        else
+                        {
+                            <span>Save Message</span>
+                        }
+                    </button>
+                    <a class="btn btn-outline-secondary btn-lg" href="/messages">Cancel</a>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+@code {
+    private MessageCreateModel model = new();
+    private string? errorMessage;
+    private bool isSubmitting;
+
+    private async Task HandleValidSubmit()
+    {
+        isSubmitting = true;
+        errorMessage = null;
+
+        var (created, error) = await MessageService.CreateAsync(model);
+
+        if (created != null)
+        {
+            Navigation.NavigateTo("/messages");
+            return;
+        }
+
+        errorMessage = error;
+        isSubmitting = false;
+    }
+}
